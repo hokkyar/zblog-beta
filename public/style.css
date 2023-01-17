@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --navbar-color-1: hsl(222, 12%, 33%);
+  --body-color-1: hsl(0, 10%, 92%)
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, var(--navbar-color-1));
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body-color-1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--body-color-1);
+}
+
+nav {
+  background-color: var(--navbar-color-1);
+}
+
+header h1 {
+  cursor: default;
+}
+
+.pagination {
+  background-color: var(--body-color-1);
+}
+
+nav .pagination .page-link:focus {
+  box-shadow: none;
+}
+
+nav .pagination .active {
+  border: var(--navbar-color-1);
+  background-color: var(--navbar-color-1);
+}
+
+figure {
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: var(--navbar-color-1);
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.overlay:hover {
+  opacity: .95;
+}
+
+.overlay-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.blog-content .card:hover {
+  cursor: pointer;
+}
+
+.blog-content .card img {
+  object-fit: cover;
+  transition: .3s;
+}
+
+/* .blog-content .card img:hover {
+  transform: scale(1.2);
+} */
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.judul-blog {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.page-link {
+  color: var(--navbar-color-1);
+}
+
+.active {
+  opacity: .8;
+}
+
+.nav-item {
+  transition: .3s;
+}
+
+.nav-item:hover {
+  opacity: 1;
+}
+
+.nav-item a {
+  color: white;
+}
+
+.form-select:focus,
+.col .form-control:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 5px var(--navbar-color-1);
+  border: none;
+}
+
+/* Remove border from toggler */
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar {
+  margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: white;
+}
+
+footer {
+  background-color: var(--navbar-color-1);
+}
+
+.input-group-text {
+  color: white;
+  background-color: var(--navbar-color-1);
+}
+
+.not-found {
+  width: 100%;
+  /* height: 40vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  margin-top: -80px;
+}
+
+.about-image {
+  background-image: linear-gradient(var(--navbar-color-1), hsl(249, 100%, 92%));
+  background-size: cover;
+}
+
+.about-img img {
+  width: 150px;
+  height: 150px;
+}
+
+.about-image-bg {
+  height: 200px;
+}
+
+.about-image-bg h1 {
+  font-size: 4rem;
+}
+
+.blog-info {
+  display: flex;
+}
+
+@media (width <=600px) {
+  header .container .row {
+    flex-direction: column-reverse;
+  }
+
+  .about-img {
+    margin-top: -40px;
+  }
+
+  .about-image {
+    background-size: contain;
+  }
+
+  .about-image-bg {
+    height: 90px;
+  }
+
+  .about-image-bg h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-img img {
+    width: 100px;
+    height: 100px;
+  }
+}
